@@ -120,6 +120,7 @@ body {
     font-family: arial, 'Hiragino Sans GB', 'Microsoft YaHei',
         'WenQuanYi Micro Hei', sans-serif;
     background: white;
+    user-select: none;
 }
 
 ul,

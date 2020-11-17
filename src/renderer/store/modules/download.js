@@ -83,9 +83,13 @@ export default {
                 data.data.url = 'https:' + data.data.url
             }
             if (data.status) {
+                const download_filename =
+                    song.artists.reduce((a, b) => a + b.name, '') +
+                    ' - ' +
+                    song.name
                 Vue.$ipc.send('download-btn', {
                     url: data.data.url,
-                    filename: song.name + '.mp3',
+                    filename: download_filename + '.mp3',
                     id,
                     directory:
                         Vue.$store.state.user.setting.downloadedSongsFolder,
